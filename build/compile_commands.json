@@ -1,0 +1,116 @@
+[
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/main.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/main.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/main.cpp",
+  "output": "CMakeFiles/image_processor.dir/main.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/parser.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/parser.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/parser.cpp",
+  "output": "CMakeFiles/image_processor.dir/parser.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/pixel.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/pixel.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/pixel.cpp",
+  "output": "CMakeFiles/image_processor.dir/pixel.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/image.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/image.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/image.cpp",
+  "output": "CMakeFiles/image_processor.dir/image.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/window.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/window.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/window.cpp",
+  "output": "CMakeFiles/image_processor.dir/window.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/bmp.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/bmp.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/bmp.cpp",
+  "output": "CMakeFiles/image_processor.dir/bmp.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/image_wrapper.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/image_wrapper.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/image_wrapper.cpp",
+  "output": "CMakeFiles/image_processor.dir/image_wrapper.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/image_processor.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/image_processor.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/image_processor.cpp",
+  "output": "CMakeFiles/image_processor.dir/image_processor.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/fabric.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/fabric.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/fabric.cpp",
+  "output": "CMakeFiles/image_processor.dir/fabric.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/modifier.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/modifier.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/modifier.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/modifier.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/negative.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/negative.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/negative.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/negative.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/crop.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/crop.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/crop.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/crop.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/gray.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/gray.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/gray.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/gray.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/sharp.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/sharp.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/sharp.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/sharp.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/edge.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/edge.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/edge.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/edge.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/balance.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/balance.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/balance.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/balance.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/vshrink.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/vshrink.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/vshrink.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/vshrink.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/hshrink.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/hshrink.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/hshrink.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/hshrink.cpp.o"
+},
+{
+  "directory": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/build",
+  "command": "/usr/bin/g++   -g -std=gnu++17 -o CMakeFiles/image_processor.dir/filters/shrink.cpp.o -c /home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/shrink.cpp",
+  "file": "/home/cleon/Documents/Proga/CPP_PROGS/image_processor/filters/shrink.cpp",
+  "output": "CMakeFiles/image_processor.dir/filters/shrink.cpp.o"
+}
+]

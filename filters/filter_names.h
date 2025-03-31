@@ -1,0 +1,11 @@
+#pragma once
+#include "basefilter.h"
+#include "negative.h"
+#include "crop.h"
+#include "gray.h"
+#include "sharp.h"
+#include "edge.h"
+#include "balance.h"
+#include "vshrink.h"
+#include "hshrink.h"
+#include "shrink.h"
