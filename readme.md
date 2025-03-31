@@ -1,94 +1,53 @@
-## Поддерживаемый формат изображений
+## Supported Image Format
 
-Входные и выходные графические файлы должны быть в формате [BMP](http://en.wikipedia.org/wiki/BMP_file_format).
+Input and output image files must be in [BMP format](http://en.wikipedia.org/wiki/BMP_file_format).  
 
-Формат BMP поддерживает достаточно много вариаций, но в этом задании будет использоваться
-24-битный BMP без сжатия и без таблицы цветов. Тип используемого `DIB header` - `BITMAPINFOHEADER`.
+The BMP format supports many variations, but this project uses **24-bit uncompressed BMP without a color table**. The `DIB header` type must be `BITMAPINFOHEADER`.  
 
-Пример файла в нужном формате есть в статье на Википедии [в разделе "Example 1"](https://en.wikipedia.org/wiki/BMP_file_format#Example_1)
-и в папке [test_script/data](test_script/data).
+Example files in the required format can be found:  
+- In the Wikipedia article under ["Example 1"](https://en.wikipedia.org/wiki/BMP_file_format#Example_1).  
+- In the [`test_script/data`](test_script/data) directory.  
 
-При тестировании обязательно обращайте внимание на то, чтобы тестовое изображение
-было сохранено именно в 24-битном BMP.
+**Important**: During testing, ensure your test images are saved as **24-bit BMP**.  
 
-## Формат аргументов командной строки
+---
 
-Описание формата аргументов командной строки:
+## Command-Line Argument Format
 
-`{имя программы} {путь к входному файлу} {путь к выходному файлу}
-[-{имя фильтра 1} [параметр фильтра 1] [параметр фильтра 2] ...]
-[-{имя фильтра 2} [параметр фильтра 1] [параметр фильтра 2] ...] ...`
+The command-line syntax is as follows:  
 
-При запуске без аргументов программа выводит справку.
-
-### Пример
-`./image_processor input.bmp /tmp/output.bmp -crop 800 600 -gs -blur 0.5`
-
-В этом примере
-1. Загружается изображение из файла `input.bmp`
-2. Обрезается до изображения с началом в верхнем левом углу и размером 800х600 пикселей
-3. Переводится в оттенки серого
-4. Применяется размытие с сигмой 0.5
-5. Полученное изображение сохраняется в файл `/tmp/output.bmp`
-
-Список фильтров может быть пуст, тогда изображение должно быть сохранено в неизменном виде.
-Фильтры применяются в том порядке, в котором они перечислены в аргументах командной строки.
-
-## Фильтры
-
-В формулах далее считаем, что каждая компонента цвета
-представлена вещественным числом от 0 до 1. Цвета пикселей
-представлены тройками `(R, G, B)`. Таким образом, `(0, 0, 0)` – черный,
-`(1, 1, 1)` – белый.
-
-Если фильтр задан матрицей, это означает, что значение каждого из цветов определяется взвешенной суммой
-значений этого цвета в соседних пикселях в соответствии с матрицей. При этом целевому пикселю
-соответствует центральный элемент матрицы.
-
-Например, для фильтра, заданного матрицей
-
-![encoding](https://latex.codecogs.com/svg.image?%5Cbegin%7Bbmatrix%7D1%20&%202%20&%203%20%5C%5C4%20&%205%20&%206%20%5C%5C7%20&%208%20&%209%20%5C%5C%5Cend%7Bbmatrix%7D)
-
-Значение каждого из цветов целевого пикселя `C[x][y]` будет определяться формулой
-
-```
-C[x][y] =
-  min(1, max(0,
-   1*C[x-1][y-1] + 2*C[x][y-1] + 3*C[x+1][y-1] +
-   4*C[x-1][y]   + 5*C[x][y]   + 6*C[x+1][y]   +
-   7*C[x-1][y+1] + 8*C[x][y+1] + 9*C[x+1][y+1]
-))
+```bash
+{program_name} {input_file_path} {output_file_path} \
+[-{filter_name_1} [filter_param_1] [filter_param_2] ...] \
+[-{filter_name_2} [filter_param_1] [filter_param_2] ...] ...
 ```
 
-При обработке пикселей, близких к краю изображения, часть матрицы может выходить за границу изображения.
-В таком случае в качестве значения пикселя, выходящего за границу, следует использовать значение ближайшего
-к нему пикселя изображения.
+If launched without arguments, the program displays a help message.  
 
-### Список базовых фильтров
+### Example  
+```bash
+./image_processor input.bmp /tmp/output.bmp -crop 800 600 -gs -vshrink 300
+```
 
-#### Crop (-crop width height)
-Обрезает изображение до заданных ширины и высоты. Используется верхняя левая часть изображения.
+**Step-by-step execution**:  
+1. Loads the image from `input.bmp`.  
+2. Crops it to `800x600` pixels (starting from the top-left corner).  
+3. Converts it to grayscale.  
+4. Applies vertical resizing to a height of `300` pixels.  
+5. Saves the result to `/tmp/output.bmp`.  
 
-Если запрошенные ширина или высота превышают размеры исходного изображения, выдается доступная часть изображения.
+**Notes**:  
+- The filter list may be empty (saves the original image unchanged).  
+- Filters are applied **in the order they appear** in the command. 
 
-#### Grayscale (-gs)
-Преобразует изображение в оттенки серого по формуле
+## Filters
 
-![encoding](https://latex.codecogs.com/svg.image?R'%20=%20G'%20=%20B'%20=0.299%20R%20&plus;%200%20.587%20G%20&plus;%200%20.%20114%20B)
-
-#### Negative (-neg)
-Преобразует изображение в негатив по формуле
-
-![encoding](https://latex.codecogs.com/svg.image?R'%20=%201%20-%20R,%20G'%20=%201%20-%20G,%20B'%20=%201%20-%20B)
-
-#### Sharpening (-sharp)
-Повышение резкости. Достигается применением матрицы
-
-![encoding](https://latex.codecogs.com/svg.image?%5Cbegin%7Bbmatrix%7D%20&%20-1%20&%20%20%5C%5C-1%20&%205%20&%20-1%20%5C%5C%20&%20-1%20&%20%20%5C%5C%5Cend%7Bbmatrix%7D)
-
-#### Edge Detection (-edge threshold)
-Выделение границ. Изображение переводится в оттенки серого и применяется матрица
-
-![encoding](https://latex.codecogs.com/svg.image?%5Cbegin%7Bbmatrix%7D%20&%20-1%20&%20%20%5C%5C-1%20&%204%20&%20-1%20%5C%5C%20&%20-1%20&%20%20%5C%5C%5Cend%7Bbmatrix%7D)
-
-Пиксели со значением, превысившим `threshold`, окрашиваются в белый, остальные – в черный.
+| Filter       | Description                                      | Usage                     | Example               |
+|--------------|--------------------------------------------------|---------------------------|-----------------------|
+| **`-gs`**    | Convert image to grayscale.                      | `-gs`                     | `-gs`                 |
+| **`-crop`**  | Crop the image (top-left corner).                | `-crop <width> <height>`  | `-crop 800 600`       |
+| **`-sharp`** | Enhance image sharpness                          | `-sharp`                  | `-sharp`              |
+| **`-edge`**  | Highlight edges with adjustable intensity.       | `-edge <threshold>`       | `-edge 0.5`           |
+| **`-vshrink`** | Vertically resize (shrink/stretch height).     | `-vshrink <new_height>`   | `-vshrink 300`        |
+| **`-hshrink`** | Horizontally resize (shrink/stretch width).    | `-hshrink <new_width>`    | `-hshrink 400`        |
+| **`-shrink`**  | Resize to exact dimensions (may stretch).      | `-shrink <height> <width>`| `-shrink 300 400`     |
